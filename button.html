@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REMOTE</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Make the body take up the full viewport height */
+            margin: 0; /* Remove default margin */
+        }
+        #container {
+            text-align: center;
+        }
+        table {
+            width: 300px; /* Adjust the width of the table */
+            margin-bottom: 20px; /* Add margin at the bottom */
+        }
+        td {
+            padding: 0; /* Remove padding from table cells */
+            text-align: center;
+        }
+        button {
+            width: 100px; /* Fixed width for buttons */
+            height: 50px; /* Fixed height for buttons */
+            padding: 8px; /* Adjust button padding */
+            margin: 5px; /* Add margin between buttons */
+            font-size: 16px; /* Adjust button font size */
+            background-color: #4CAF50; /* Green */
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+        }
+        button:hover {
+            background-color: #45a049; /* Darker green when hovered */
+        }
+        #output {
+            text-align: center;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <table>
+        <tr>
+            <td></td>
+            <td><button onclick="myFunction('ATAS')" id="atas">ATAS</button></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><button onclick="myFunction('KIRI')" id="kiri">KIRI</button></td>
+            <td><button onclick="myFunction('TENGAH')" id="tengah">TENGAH</button></td>
+            <td><button onclick="myFunction('KANAN')" id="kanan">KANAN</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="myFunction('BAWAH')" id="bawah">BAWAH</button></td>
+            <td></td>
+        </tr>
+    </table>
+    <h1 id="output">TENGAH</h1> <!-- Default text is "TENGAH" -->
+</div>
+
+<script>
+    function myFunction(direction) {
+      document.getElementById("output").innerText = direction;
+    }
+</script>
+
+</body>
+</html>
